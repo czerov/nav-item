@@ -1,15 +1,3 @@
-import mysql from 'mysql2/promise';
-
-const connection = await mysql.createConnection({
-  host: process.env.MYSQL_HOST,
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
-  port: process.env.MYSQL_PORT
-});
-
-export default connection;
-
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const path = require('path');
@@ -305,4 +293,5 @@ db.serialize(() => {
 
 
 module.exports = db; 
+
 
